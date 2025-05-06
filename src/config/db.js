@@ -7,7 +7,7 @@ async function conectarBanco() {
     const connection = await oracledb.getConnection({
       user: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
-      connectString: `${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_SID}` //ajeitar corretamente e jogar no docker run
+      connectString: process.env.DB_CONNECTION_STRING //teste para depuração 
     });
     return connection;
   } catch (error) {
