@@ -17,5 +17,7 @@ COPY . .
 # Instalar pacotes Node.js
 RUN npm install
 
+EXPOSE 3040
+
 # Comando para iniciar a aplicação
 CMD [ "node", "server.js" ]
